@@ -1,0 +1,3 @@
+# Platonic
+
+A CAD Kernel
