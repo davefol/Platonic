@@ -1,0 +1,24 @@
+use crate::lexer;
+
+grammar;
+
+extern {
+    type Location = usize;
+    type Error = lexer::LexicalError;
+
+    enum lexer::Token {
+        "UserDefinedKeyword" => lexer::Token::UserDefinedKeyword,
+        "StandardKeyword" => lexer::Token::StandardKeyword,
+        "Integer" => lexer::Token::Integer,
+        "Real" => lexer::Token::Real,
+        "String" => lexer::Token::String,
+        "EntityInstanceName" => lexer::Token::EntityInstanceName,
+        "ValueInstanceName" => lexer::Token::ValueInstanceName,
+        "ConstantEntityName" => lexer::Token::ConstantEntityName,
+        "ConstantValueName" => lexer::Token::ConstantValueName,
+        "Resource" => lexer::Token::Resource,
+        "Enumeration" => lexer::Token::Enumeration,
+        "Binary" => lexer::Token::Binary,
+        "SignatureContent" => lexer::Token::SignatureContent,
+    }
+}

@@ -1,5 +1,3 @@
-use std::str::CharIndices;
-
 use logos::Logos;
 
 #[derive(Logos, Debug, PartialEq)]
